@@ -1,0 +1,6 @@
+CREATE TABLE users (
+    userid VARCHAR(255) PRIMARY KEY,
+    chatid VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    record INT DEFAULT 0
+);

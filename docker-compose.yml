@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres
+    container_name: profburo-os-postgres
+    env_file:
+      - "./env/postgres.env"
+    ports:
+      - "5678:5432"
+    volumes:
+      - "./user.sql:/docker-entrypoint-initdb.d/create_table.sql"
+
+  application:
+    build: .
+    container_name: profburo-os-application
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./env/app.env
+    volumes:
+      - "/etc/letsencrypt/live/profburo-os.ru:/app/src/main/resources/ssl"
+    command: java -jar profburo_os.jar
+    depends_on:
+    - postgres
+
