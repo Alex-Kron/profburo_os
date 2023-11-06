@@ -1,0 +1,42 @@
+@font-face {
+    font-family: Unbounded;
+    src: url(/fonts/Unbounded-Medium.ttf);
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  user-select: none;
+
+  display: block;
+  width: 100vw; /* 100% ширины видимой области экрана */
+  height: 100vh; /* 100% высоты видимой области экрана */
+  object-fit: cover; /* Растягивает изображение, чтобы полностью заполнить контейнер, сохраняя его пропорции и обрезая лишние части */
+  max-width: 100%; /* Запрещает увеличение размера изображения за пределы его естественных размеров */
+  max-height: 100%; /* Запрещает увеличение размера изображения за пределы его естественных размеров */
+  font-family: 'Unbounded', sans-serif;
+}
+
+canvas {
+        height: 85vh;
+        width: 100vw;
+        display: block;
+}
+
+header {
+  width: 100vw;
+  margin: 0 auto;
+}
+h1 {
+  background: url("/images/game/flappy-bird-set_7.png") 0% 340px;
+  color: white;
+  padding: 1.2rem 0;
+  margin: 0;
+}
+.score-container {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 6px;
+  background: #7B1FF8;
+}

@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class TelegramController {
 
-    @GetMapping("/")
+    @GetMapping("/prof4game")
     public String start() {
-        return "start";
+        return "game";
     }
 }

@@ -4,15 +4,15 @@
 server.port=8080
 server.session.timeout=900
 spring.resources.static-locations=classpath:/static/
-#server.ssl.certificate=${CERTIFICATE}
-#server.ssl.certificate-private-key=${PRIVKEY}
+server.ssl.certificate=${CERTIFICATE}
+server.ssl.certificate-private-key=${PRIVKEY}
 
 
 # Database
 
-spring.datasource.url=jdbc:postgresql://localhost:5678/profburodb
-spring.datasource.username=profburoos
-spring.datasource.password=s9e4*xpnRf5EEbcd
+spring.datasource.url=jdbc:postgresql://localhost:5678/${DB_NAME}
+spring.datasource.username=${DB_USER}
+spring.datasource.password=${DB_PASS}
 spring.datasource.driverClassName=org.postgresql.Driver
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto=validate
@@ -20,6 +20,5 @@ spring.jpa.show-sql=true
 
 # Bot
 
-bot.name=profburoosbot
-bot.token=6325621925:AAEdA8gGVwgQOINPkPYquI7cvkRMoKhXlwc
-
+bot.name=${TG_USERNAME}
+bot.token=${TG_TOKEN}
