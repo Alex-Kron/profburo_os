@@ -17,8 +17,6 @@ services:
       - "8080:8080"
     env_file:
       - ./env/app.env
-    volumes:
-      - "/etc/letsencrypt/live/profburo-os.ru:/app/src/main/resources/ssl"
     command: java -jar profburo_os.jar
     depends_on:
     - postgres
